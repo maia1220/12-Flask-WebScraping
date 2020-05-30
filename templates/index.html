@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Send me to Mars!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div clas="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+      
+    <!-- Mars data -->
+    <div class="row">
+      <div class="col-md-12" style="margin: 10px">
+        <h3 class="heading">Latest Mars News</h3>
+        <h4>{{ mars.title }}</h4>
+        <p>{{ mars.p }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 style="margin:initial">Featured Mars Image</h3>
+        <img src= "{{ mars.src }}" class="img-thumbnail"  alt="Mars">
+      </div>
+        <!-- <div class="w-100"></div> -->
+        <div class="col-sm-4">
+          <h5>Current Weather on Mars</h5>
+          <p>{{ mars.weather }}</p>
+        </div>
+       <div class="col-sm-4">
+          <h5>Mars Facts Test</h5>
+          <table>{{ mars.table|safe }}</table>
+          
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h3>Mars Hemisphere</h3>
+      </div>
+    </div>
+
+
+  
+
+  <div class="row">   
+    <div class="col-sm-6 text-center">
+      <a href="{{ mars['hemi_urls'][0]['image_url'] }}"><img src="{{ mars['hemi_urls'][0]['image_url'] }}" alt=".." class="img-thumbnail" style="align-self: center; margin: 10px; width: 50%; height: 50%; ">{{ mars['hemi_urls'][0]['title'] }} </a>
+    </div>
+    <div class="col-sm-6 text-center">
+      <a href="{{ mars['hemi_urls'][1]['image_url'] }}"><img src="{{ mars['hemi_urls'][1]['image_url'] }}" alt=".." class="img-thumbnail" style="align-self: center; margin: 10px; width: 50%; height: 50%; ">{{ mars['hemi_urls'][1]['title'] }} </a>
+   </div>
+ </div>
+  <div class="row">   
+    <div class="col-sm-6 text-center">
+      <a href="{{ mars['hemi_urls'][2]['image_url'] }}"><img src="{{ mars['hemi_urls'][2]['image_url'] }}" alt=".." class="img-thumbnail" style="align-self: center; margin: 10px; width: 50%; height: 50%;">{{ mars['hemi_urls'][2]['title'] }} </a>
+    </div>
+    <div class="col-sm-6 text-center"> 
+      <a href="{{ mars['hemi_urls'][3]['image_url'] }}"><img src="{{ mars['hemi_urls'][3]['image_url'] }}" alt=".." class="img-thumbnail" style="align-self: center; margin: 10px; width: 50%; height: 50%;">{{ mars['hemi_urls'][3]['title'] }} </a>
+   </div>
+ </div>
+
+
+
+
+
+</body>
+</html>
+
