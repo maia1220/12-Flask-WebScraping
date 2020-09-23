@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Web Scraping Project - Mission to Mars
 
 ### Goal
@@ -47,3 +48,8 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 * Used Pymongo for CRUD applications for the database. 
 
 * Used Bootstrap to structure the HTML template.
+=======
+# web-scraping-challenge
+
+Send me to Mars!.pdf is the screenshot. Thanks!
+>>>>>>> 01fbba5125481e77daf5a17612a1fa9b5073c62d
